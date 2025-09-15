@@ -1,8 +1,7 @@
 ## Docker Build
 Builds Docker images from a `Dockerfile` and a `context`.
 
-[!Note]
-Context: set of files located in a specific path or URL.
+> Context: set of files located in a specific path or URL.
 
 **Command**
 
@@ -91,8 +90,7 @@ ARG <name>[=<default value>]
   
 - ARG variables goes out of scope at the end of the stage where it was defined. You must include ARG instruction in each stage.
 
-[!CAUTION]
-ENV variables always override ARG variables of the same name
+> ENV variables always override ARG variables of the same name
 
 
 ### 6. WORKDIR
@@ -113,8 +111,7 @@ WORKDIR /path/to/workdir
 USER <user>[:<group>]
 ```
 
-[!WARNING]
-The user should be already existing on the system otherwise an error will occur
+> The user should be already existing on the system otherwise an error will occur
 
 - If no USER is specified, the commands are executed under `root user`, which isn't recommended from a security point.   
 
