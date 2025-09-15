@@ -26,7 +26,7 @@ docker build -t log-generator:0.1 -f Dockerfile . # . is the path you're standin
 ## Docker Instructions
 ### 1. FROM
 - Initializes a new build stage and sets the base image (valid image) for subsequent instructions.
-- For an empty image ==FROM scratch==.
+- For an empty image `FROM scratch`.
 - Using more than one FROM is called `multi-stage build`.
 - Use `AS` to name stages.
 
@@ -35,7 +35,7 @@ docker build -t log-generator:0.1 -f Dockerfile . # . is the path you're standin
 - The added layer is used in the next steps in the Dockerfile.
 - To execute multiple RUN commands:
     - Have several RUN lines, ==not recommended== as they will add layers to the image making it heavier.
-    - Use `&&`
+    - Use `&&` 
     ```bash 
     RUN apt-get update && apr-get install -y curl
     ```
