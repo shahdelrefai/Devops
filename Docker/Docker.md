@@ -34,7 +34,7 @@ docker build -t log-generator:0.1 -f Dockerfile . # . is the path you're standin
 - Executes any commands to create a `new layer` on top of the current image.
 - The added layer is used in the next steps in the Dockerfile.
 - To execute multiple RUN commands:
-    - Have several RUN lines, ==not recommended== as they will add layers to the image making it heavier.
+    - Have several RUN lines, **not recommended** as they will add layers to the image making it heavier.
     - Use `&&` 
     ```bash 
     RUN apt-get update && apr-get install -y curl
@@ -146,7 +146,7 @@ EXPOSE <port>[<port>/<protocol>]
 - It assumes TCP by default.
 - Doesn't actually publish the port. It functions as a type of documentation between the person who builds the image and the person who runs the container. (To open the ports use `-p` when running)
 
-==A container is only alive as long as the process inside is alive==
+> A container is only alive as long as the process inside is alive
 *What defines the process that executes within a process container?* `CMD` or `ENTRYPOINT`
 ### 10. CMD and ENTRYPOINT
 **CMD**
